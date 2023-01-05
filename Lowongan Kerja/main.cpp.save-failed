@@ -1,0 +1,73 @@
+#include "LowonganKerja.h"
+
+int main() {
+    listPelamar listP;
+    newListPelamar(listP);
+    adrPelamar newPelamar, dataPelamar;
+
+    listLowongan listL;
+    newListLowongan(listL);
+    adrLowongan newLowongan, dataLowongan;
+
+    string namaPelamar, asalPelamar, pendidikanTerakhir;
+    int usia;
+    float ipk;
+
+    bool loopMenu = true;
+    int inputUser, n;
+    while(loopMenu) {
+        cout << "===== Menu Utama =====" << endl;
+        cout << "1. Input Pelamar" << endl;
+        cout << "2. Input Lowongan Kerja" << endl;
+        cout << "3. Cari Pelamar" << endl;
+        cout << "4. Cari Lowongan Kerja" << endl;
+        cout << "5. Cari Pelamar dan Lowongan Kerjanya" << endl;
+        cout << "6. Print List Pelamar" << endl;
+        cout << "7. Print List Lowongan" << endl;
+        cout << "8. Print Child Pelamar" << endl;
+
+        cout << "Input Menu User : "; cin >> inputUser;
+
+        if (inputUser == 1) {
+            cout << endl << "Banyak Pelamar yang akan diinput : "; cin >> n;
+
+            for(int i = 0; i < n; i++) {
+                cout << endl;
+                cout << "Nama : "; cin >> namaPelamar;
+                cout << "Asal : "; cin >> asalPelamar;
+                cout << "Pendidikan Terakhir : "; cin >> pendidikanTerakhir;
+                cout << "IPK : "; cin >> ipk;
+                cout << "Usia : "; cin >> usia;
+
+                newPelamar = newNodePelamar(namaPelamar, asalPelamar, pendidikanTerakhir, ipk, usia);
+                insertPelamar(listP, newPelamar);
+            }
+        } else if (inputUser == 2) {
+            cout << endl << "Banyak Lowongan Kerja yang akan diinput : "; cin >> n;
+
+            for(int i = 0l i < n; i++) {
+                cout << endl;
+                cout << "Jabatan : "; cin >> jabatanLowongan;
+                cout << "Gaji : "; cin >> gajiLowongan;
+                cout << "Tanggal Wawancara : "; cin >> tanggalLowongan;
+
+                newLowongan = newNodeLowongan(jabatanLowongan, gajiLowongan, tanggalLowongan);
+                insertLowongan(listL, newLowongan);
+            }
+        } else if (inputUser == 3) {
+            cout << endl << "Nama Pelamar yang akan dicari : "; cin >> namaPelamar;
+            dataPelamar = cariPelamar(listP, namaPelamar);
+
+            if(dataPelamar != NULL) {
+                cout << endl << "Ditemukan Pelamar dengan nama " << namaPelamar << endl;
+                cout << "Nama : " << info(dataPelamar).nama << endl;
+                cout << "Asal : " << info(dataPelamar).asal << endl;
+                cout << "Pendidikan Terakhir : " << info(dataPelamar).pendidikanTerakhir << endl;
+                cout << "IPK : " << info(dataPelamar).ipk << endl;
+                cout << "Usia : " << info(dataPelamar).usia << endl;
+            }
+
+
+        }
+    }
+}

@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1672761292 source:c:\users\firda\documents\rafly data\telkom university\mata kuliah\semester 3\struktur data praktikum\tugas besar i.o\lowongan kerja\main.cpp
+	"LowonganKerja.h"
+
+1672761177 source:c:\users\firda\documents\rafly data\telkom university\mata kuliah\semester 3\struktur data praktikum\tugas besar i.o\lowongan kerja\lowongankerja.cpp
+	"LowonganKerja.h"
+
+1672757463 c:\users\firda\documents\rafly data\telkom university\mata kuliah\semester 3\struktur data praktikum\tugas besar i.o\lowongan kerja\lowongankerja.h
+	<iostream>
+
+1672815620 source:c:\users\asus\downloads\lowongan kerja\lowongan kerja\main.cpp
+	"LowonganKerja.h"
+
+1672757463 c:\users\asus\downloads\lowongan kerja\lowongan kerja\lowongankerja.h
+	<iostream>
+
